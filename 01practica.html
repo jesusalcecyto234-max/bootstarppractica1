@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <title>PRACTICA 1</title>
+    <a href="index.html">REGRESAR</a>
+</head>
+<body>
+    
+<nav class="navbar bg-primary fg-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/cecy.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      PRACTICAS JAVASCRIPT
+    </a>
+  </div>
+</nav>
+<div class="container p-4 bg-info mt-5 card">
+<h1 class="text-center">PRACTICA 1 </h1>
+</div>
+<div class="container p-4">
+  <div class="row">
+    <div class="col">
+      <button class="btn-solid theme-primary my-3" onclick="mensaje()"><i class="bi bi-flower1"></i>Boton 1</button>
+      <button class="btn-subtle theme-danger my-3" onclick="mensaje1()"><i class="bi bi-airplane"></i>Boton 2</button>
+      <button class="btn-outline theme-success my-3" onclick="mensaje2()"><i class="bi bi-activity"></i>Boton 3</button>
+      <button class="btn-text theme-warning my-3" onclick="mensaje3()"><i class="bi bi-alarm"></i>Boton 4</button>
+      <button class="btn-solid theme-secondary my-3" onclick="mensaje4()"><i class="bi bi-amazon"></i>Boton 5</button>
+    </div>
+    <div class="col">
+      <button class="btn-subtle theme-accent my-3" onclick="mensaje5()"><i class="bi bi-apple"></i>Boton 6</button>
+      <button class="btn-solid theme-info my-3" onclick="mensaje6()"><i class="bi bi-android2"></i>Boton 7</button>
+      <button class="btn-text theme-inverse my-3" onclick="mensaje7()"><i class="bi bi-filetype-pdf"></i>Boton 8</button>
+      <button class="btn-outline theme-accent my-3" onclick="mensaje8()"><i class="bi bi-pc-display-horizontal"></i>Boton 9</button>
+      <button class="btn-solid theme-danger my-3" onclick="mensaje9()"><i class="bi bi-emoji-grimace"></i>Boton 10</button>
+    </div>
+  </div>
+</div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script>
+        function mensaje(){
+            Swal.fire({
+                title: "Exito!",
+                text: "Se ejecuto correctamente el script",
+                icon: "success"
+            });
+        }
+    </script>
+    <script>
+        function mensaje1(){
+            Swal.fire("ESTA TRABAJANDO!");
+        }
+       
+    </script>
+    <script>
+        function mensaje2(){
+            Swal.fire({
+                title: "EL CECY WIFI",
+                text: "NO SIRVE?",
+                icon: "question"
+            });
+        }
+        
+    </script>
+    <script>
+        function mensaje3(){
+            Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "NO HE ACABADO!",
+  
+});
+        }
+        
+    </script>
+    <script>
+        function mensaje4(){
+            Swal.fire({
+  imageUrl: "img/cecy.png",
+  imageHeight: 500,
+  imageAlt: "A tall image"
+});
+        }
+        
+    </script>
+    <script>
+        function mensaje5(){
+            Swal.fire({
+  title: "<strong>JAVASCRIPT <u>ACTIVITY</u></strong>",
+  icon: "info",
+  html: `
+    Tu no has acabado</b>,
+   
+  `,
+  showCloseButton: true,
+  showCancelButton: true,
+  focusConfirm: false,
+  confirmButtonText: `
+    👍 Perfecto!
+  `,
+  confirmButtonAriaLabel: "Thumbs up, great!",
+  cancelButtonText: `
+    👎
+  `,
+  cancelButtonAriaLabel: "Thumbs down"
+});
+        }
+        
+    </script>
+
+
+<script>
+        function mensaje7(){
+            Swal.fire({
+  title: "QUIERES A RENE?",
+  showDenyButton: true,
+  showCancelButton: true,
+  confirmButtonText: "SI",
+  denyButtonText: `NO`
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) Swal.fire("EXCELENTE ELECCION!", "", "success");
+  else if (result.isDenied) Swal.fire("REPROBADO", "", "info");
+});
+        }
+        
+    </script>
+
+
+<script>
+        function mensaje8(){
+           const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: "btn btn-success",
+    cancelButton: "btn btn-danger"
+  },
+  buttonsStyling: false
+});
+swalWithBootstrapButtons.fire({
+  title: "quieres eliminar a un perro?",
+  text: "seguro!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonText: "Yes, eliminalo",
+  cancelButtonText: "No, espera",
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) swalWithBootstrapButtons.fire({
+    title: "ELIMINADO!",
+    text: "Tu has eliminado al perro",
+    icon: "success"
+  });
+  else if (result.dismiss === Swal.DismissReason.cancel)
+ /* Read more about handling dismissals below */
+  swalWithBootstrapButtons.fire({
+    title: "NO ELIMINADO",
+    text: "TU SALVASTE AL PERRO :)",
+    icon: "error"
+  });
+});
+        }
+        
+    </script>
+
+
+
+
+<script>
+        function mensaje9(){
+          Swal.fire({
+  title: "CECYTEM!",
+  text: "este es cecyto el dueño de todooo cecytem",
+  imageUrl: "img/cecy.png",
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: "Custom image"
+});
+        }
+        
+    </script>
+
+
+
+<script>
+        function mensaje6(){
+         let timerInterval;
+Swal.fire({
+  title: "PANTALLA HTML!",
+  html: "ESTA PANTALLA SE AUTODESTRUIRA EN <b></b> ",
+  timer: 2000,
+  timerProgressBar: true,
+  didOpen: () => {
+    Swal.showLoading();
+    const timer = Swal.getPopup().querySelector("b");
+    timerInterval = setInterval(() => {
+      timer.textContent = `${Swal.getTimerLeft()}`;
+    }, 100);
+  },
+  willClose: () => {
+    clearInterval(timerInterval);
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) console.log("I was closed by the timer");
+});
+        }
+        
+    </script>
+
+
+
+</body>
+</html>
