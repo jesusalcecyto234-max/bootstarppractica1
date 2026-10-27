@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREDIHOME DEPOT</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body onload="cargarProductos()">
+
+    <header class="encabezado">
+        <img src="img/logo.png" alt="Home Depot" onError="this.style.display='none'">
+        <h1>CREDIHOME DEPOT</h1>
+    </header>
+<br>
+<br>
+    <div class="container my-4">
+        <h2 class="text-center fw-bold mb-4">COTIZADOR DE PRODUCTOS</h2>
+        
+        
+        <div class="card-producto">
+            
+            <div class="row g-3 mb-3">
+                <div class="col-12 col-md-6">
+                    <label for="area" class="fw-bold mb-1">Área:</label>
+                    <select name="area" id="area" class="form-select" onchange="cargarProductos()">
+                        <option value="Jardineria">Jardinería</option>
+                        <option value="Herramientas">Herramientas</option>
+                        <option value="Decoracion">Decoración</option>
+                        <option value="Iluminacion">Iluminación</option>
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="producto" class="fw-bold mb-1">Producto:</label>
+                    <select name="producto" id="producto" class="form-select" onchange="calcular()">
+                    </select>
+                </div>
+            </div>
+
+           
+            <div id="img" class="text-center my-3"></div>
+            
+           
+            <div id="precio" class="precio-destacado">Precio: $ 0.00 MXN</div>
+
+            <hr class="my-4" />
+
+            <div class="text-start mb-3">
+                <h4 class="fw-bold">Plazo a Crédito</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="plazo" id="uno" value="0.10" checked onchange="calcular()"/>
+                    <label class="form-check-label" for="uno">6 Meses (+10%)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="plazo" id="dos" value="0.15" onchange="calcular()"/>
+                    <label class="form-check-label" for="dos">12 Meses (+15%)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="plazo" id="tres" value="0.20" onchange="calcular()"/>
+                    <label class="form-check-label" for="tres">18 Meses (+20%)</label>
+                </div>
+            </div>
+
+            <div class="text-start mb-3">
+                <label for="cantidad" class="fw-bold mb-1">Cantidad:</label>
+                <input 
+                    type="number" 
+                    value="1"
+                    min="1" 
+                    max="10"
+                    id="cantidad"
+                    class="form-control"
+                    onchange="calcular()"
+                    onkeyup="calcular()"
+                />
+            </div>
+
+            <div class="resultados-credito mt-4 text-start">
+                <div id="contado" class="fw-bold text-secondary mb-1">Precio de Contado: $ 0.00 MXN</div>
+                <div id="credito" class="fw-bold text-dark mb-1">Precio a Crédito: $ 0.00 MXN</div>
+                <div id="abono" class="fw-bold text-success fs-5">Abono Mensual: $ 0.00 MXN</div>
+                <button class="btn btn-warning w-100 fw-bold mt-3 btn-agregar" onclick="agregarAlCarrito()">
+    <i class="bi bi-cart-plus-fill me-2"></i> Agregar al Carrito
+</button>
+<br>
+<br>
+<div class="text-warning mb-2">
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-half"></i>
+    <span class="text-muted ms-1">(4.5)</span>
+
+    
+</div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="text-center p-3 mt-5 bg-dark text-white">
+    <p class="mb-0">© 2026 CREDIHOME DEPOT — Echo por Jesus Alberto Arroyo</p>
+</footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/05app.js"></script>
+</body>
+</html>

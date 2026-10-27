@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    border-top: 6px solid #2b2a18;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding-bottom: 40px;
+}
+
+.encabezado {
+    background-color: #fe7113;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    height: 90px;
+    width: 100%;
+}
+
+.encabezado img {
+    height: 70px;
+    width: auto;
+}
+
+.encabezado h1 {
+    color: #ffffff;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+div#img {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+select, input[type="number"] {
+    padding: 6px 12px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#precio, #contado, #credito, #abono {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 8px 0;
+}
+.card-producto {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 1200px;
+    
+    border: 3px solid #e0e0e0;
+    margin: 30px auto;
+}
+select, input[type="number"] {
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+select:focus, input[type="number"]:focus {
+    border-color: #F96302; /* Naranja Home Depot */
+}
+
+.precio-destacado {
+    color: #F96302;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.carrito-header {
+    position: relative;
+    cursor: pointer;
+}
+
+.carrito-header .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-size: 0.75rem;
+}
+
+.btn-agregar {
+    background-color: #F96302 !important;
+    border-color: #F96302 !important;
+    color: white !important;
+    padding: 10px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+    background-color: #e05500 !important;
+}
