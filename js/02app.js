@@ -33,3 +33,10 @@ numero1.oninput=()=>{calcular();}
 numero2.oninput=()=>{calcular();}
 operacion.onchange=()=>{calcular();}
 
+
+
+
+
+
+
+

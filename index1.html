@@ -1,0 +1,44 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <title>AREA DEL TRIANGULO</title>
+    
+</head>
+<body>
+    <nav class="navbar bg-primary fg-2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/cecy.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          PRACTICAS JAVASCRIPT
+        </a>
+      </div>
+    </nav>
+    <div class="container p-4 bg-info mt-5 card">
+<center>
+<h1>AREA DEL TRIANGULO</h1>
+<table width="100%" border>
+<tr>
+<td>
+<h3>BASE</h3>
+<input type="range" class="form-control" id="base" min="1" max="100" value="1" oninput="calcular()">
+<span id="vb">1</span><br>
+<h3>ALTURA</h3>
+<input type="range" class="form-control" id="altura" min="1" max="100" value="1" oninput="calcular()">
+<span id="va">1</span><br>
+<button class="btn-outline theme-success my-3" width="50" height="24" onclick="reset()"><i class="bi bi-amazon"></i>RESET</button>
+</td> 
+
+<td>
+<h1>AREA</h1>
+<h2 id="area">0</h2>
+</td>
+</tr>
+</table>
+</center>
+</div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a; /* Fondo azul oscuro muy elegante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #f8fafc;
+}
+
+.calculadora {
+    background-color: #1e293b; /* Tarjeta gris oscura */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    text-align: center;
+    border: 1px solid #334155;
+}
+
+.calculadora h2 {
+    color: #38bdf8; /* Azul brillante */
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.calculadora label {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.calculadora input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    background-color: #0f172a;
+    border: 1px solid #475569;
+    color: #f8fafc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.calculadora input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.calculadora button {
+    width: 100%;
+    padding: 11px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 5px;
+}
+
+.calculadora button:hover {
+    background-color: #0ea5e9;
+}
+
+.calculadora button:active {
+    transform: scale(0.98);
+}
+
+.resultado {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #f8fafc;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.categoria {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #cbd5e1;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    padding: 10px;
+    border-radius: 8px;
+}
