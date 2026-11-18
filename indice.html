@@ -3,35 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Calculadora de IMC</title>
     <link rel="stylesheet" href="css/indice.css">
 </head>
 <body>
+    <nav class="navbar bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/cecy.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                PRACTICAS JAVASCRIPT
+            </a>
+        </div>
+    </nav>
 
     <div class="container p-4 bg-info mt-5 card">
         <h2><i class="bi bi-apple"></i>Calculadora de IMC</h2>
         
         <div class="campo">
-            <label for="peso">Peso (kg):</label>
-            <input type="number" id="peso" placeholder="Ej. 70">
+            <label for="peso" style="color: #4eff33;">Peso (kg):</label>
+            <input type="number" id="peso" placeholder="Ej. 70" style="color: #4eff33;">
         </div>
-
+ <br>
         <div class="campo">
-            <label for="altura">Altura (cm):</label>
-            <input type="number" id="altura" placeholder="Ej. 170">
+            <label for="altura" style="color: #4eff33;">Altura (cm):</label>
+            <input type="number" id="altura" placeholder="Ej. 170" style="color: #4eff33;">
         </div>
-
-        <button onclick="calcular()">Calcular IMC</button>
+ <br>
+        <button class="btn-solid theme-success mt-3 w-100" onclick="calcular()"><i class="bi bi-heart-pulse"></i>Calcular IMC</button>
 
         <div class="resultado">
-            <p id="imc">Su IMC es: -</p>
-            <p id="categoria">Su categoria es: -</p>
+            <p id="imc">Su IMC es: </p>
+            <p id="categoria">Su categoria es: </p>
         </div>
+        <button class="btn-solid theme-warning mt-3 w-100" id="btnSigno"><i class="bi bi-arrow-repeat"> Reset</i></button>
+        
     </div>
-    <button class="btn-solid theme-warning mt-3 w-100" id="btnSigno">RESET</button>
+    <div>
+         
+    </div>
+    <br>
+    <table class="table table-striped table-hover table-bordered">
+        <tr>
+            <th>IMC</th>
+            <th>Categoría</th>
+        </tr>
+    <tr id="imc1">
+        <td>Menor a 18.5</td>
+        <td>Bajo peso</td>
+    </tr>
+    <tr id="imc2">
+        <td>18.5 - 24.9</td>
+        <td>Peso normal</td>
+    </tr>
+    <tr id="imc3">
+        <td>25 - 29.9</td>
+        <td>Sobrepeso</td>
+    </tr>
+    <tr id="imc4">
+        <td>30 - 34.9</td>
+        <td>Obesidad grado I</td>
+    </tr>
+    <tr id="imc5">
+        <td>35 a 39.9</td>
+        <td>Obesidad grado II</td>
+    </tr>
+    <tr id="imc6">
+        <td>40 o más</td>
+        <td>Obesidad grado III</td>
+    </tr>
+</table>
+<div style="text-align: center; width: 100%; margin-top: 20px;">
+        <img src="img/indice.png" width="200px" height="200px" style="border-radius: 15px;">
+    </div>
+</div>
 
-    <img src="img/indice.png" alt="">
-
+   
     <script src="masaapp.js"></script>
 </body>
 </html>
